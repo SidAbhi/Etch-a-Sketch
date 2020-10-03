@@ -1,0 +1,70 @@
+
+body {
+    display: block;
+    min-width: 100vw;
+    max-width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: orange;
+}
+header {
+    text-align: center;
+}
+main {
+    display: grid;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 55vw;
+    min-width: 40vw;
+    user-select: none;
+    grid-template-areas: 'control box';
+    grid-template-columns: min-content;
+}
+.etch {
+    display: grid;
+    grid-area: control;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 2px;
+    background-color: #6a6970;
+    border: 5px solid #6a6970;
+}
+.box {
+    grid-area: box;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35vw;
+    width: 35vw;
+}
+.control {
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.clr0 {
+    background-color: white;
+    transition: all .1s;
+}
+.clr1 {
+    background-color: #241f1f;
+    transition: all .1s;
+}
+.title {
+    display: grid;
+    height: fit-content;
+    font-weight: 800;
+    font-size: xx-large;
+    color: white;
+}
+p {
+    line-height: .1em;
+}
+#subtitle {
+    display: grid;
+    height: fit-content;
+    font-weight: 300;
+    font-size: medium;
+    color: #6a6970;
+}
