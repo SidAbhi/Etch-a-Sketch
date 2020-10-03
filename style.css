@@ -17,7 +17,7 @@ main {
     margin-left: auto;
     margin-right: auto;
     max-width: 55vw;
-    min-width: 40vw;
+    min-width: 45vw;
     user-select: none;
     grid-template-areas: 'control box';
     grid-template-columns: min-content;
@@ -35,13 +35,14 @@ main {
     grid-area: box;
     margin-left: auto;
     margin-right: auto;
-    height: 35vw;
-    width: 35vw;
+    height: 40vw;
+    width: 40vw;
 }
 .control {
     width: 50px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 .clr0 {
     background-color: white;
@@ -67,4 +68,8 @@ p {
     font-weight: 300;
     font-size: medium;
     color: #6a6970;
+}
+
+#reset {
+    margin-bottom: 20px;
 }

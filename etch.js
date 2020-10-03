@@ -21,22 +21,27 @@ function reset() {
 };
 
 function changePxl(px) {
-    pxlDensity = px;
-    etchBox.style.gridTemplateColumns = `repeat(${pxlDensity}, 1fr)`;
-    etchBox.style.gridTemplateRows = `repeat(${pxlDensity}, 1fr)`;
-    etchBox.innerHTML = '';
-    createPixel();
-    pixel = [...document.querySelectorAll('.pixel')];
-    pixel.forEach(pix => {
-        pix.addEventListener('mouseover', changeColor);
-    });
+    px = document.querySelector('#pxlSize').value;
+    if(px < 2 || px > 25) {
+        alert('Choose a number between 2-25');
+    } else {    
+        pxlDensity = px;
+        etchBox.style.gridTemplateColumns = `repeat(${pxlDensity}, 1fr)`;
+        etchBox.style.gridTemplateRows = `repeat(${pxlDensity}, 1fr)`;
+        etchBox.innerHTML = '';
+        createPixel();
+        pixel = [...document.querySelectorAll('.pixel')];
+        pixel.forEach(pix => {
+            pix.addEventListener('mouseover', changeColor);
+        });
+    }
+
 };
 
 function changeColor() {
     if (mouseDown === true) {
     document.querySelector(`#${this.id}`).classList.remove('clr0');
     document.querySelector(`#${this.id}`).classList.add('clr1');
-    console.log(document.querySelector(`#${this.id}`));
     };
 };
 
@@ -53,3 +58,5 @@ pixel.forEach(pix => {
 });
 
 document.querySelector('#reset').addEventListener('click', reset);
+
+document.querySelector('#confirm').addEventListener('click', changePxl)
