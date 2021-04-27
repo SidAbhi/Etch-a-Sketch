@@ -43,7 +43,12 @@ function changeColor() {
     document.querySelector(`#${this.id}`).classList.remove('clr0');
     document.querySelector(`#${this.id}`).classList.add('clr1');
     };
+    document.querySelector(`#${this.id}`).onmousedown = function changeContent() {
+        document.querySelector(`#${this.id}`).classList.remove('clr0');
+        document.querySelector(`#${this.id}`).classList.add('clr1');
+    }
 };
+
 
 window.addEventListener('mousedown', () => {
     mouseDown = true;
